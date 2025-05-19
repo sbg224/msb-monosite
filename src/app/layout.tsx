@@ -5,6 +5,8 @@ import Head from "next/head";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
+
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
 	weight: ["400", "500", "600", "700"],
@@ -28,6 +30,8 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+
+
 	return (
 		<html lang="fr">
 			<Head>
