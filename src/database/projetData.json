@@ -1,29 +1,36 @@
 [
-  {
-    "id": "frigocheck",
-    "title": "FrigoCheck",
-    "description": "Application de gestion alimentaire pour réduire le gaspillage. Permet de suivre les dates de péremption, gérer les stocks, créer des listes de courses et récupérer les promotions des supermarchés grâce au scraping. Utilise Node.js avec Express en backend, MySQL pour la base de données et React avec TypeScript pour le frontend.",
-    "image": "/projets/frigoCheck.png",
-    "technologies": ["React", "Node.js", "MySQL", "TypeScript", "Tailwind CSS"],
-    "githubUrl": "https://github.com/username/frigocheck",
-    "liveUrl": "https://frigocheck.com"
-  },
-  {
-    "id": "Chuko-manga",
-    "title": "Chuko Manga",
-    "description": "Plateforme de mise en relation entre amateurs de mangas, permettant l'achat et vente de mangas d'occasion. Conçu pour offrir une expérience utilisateur simple et fluide, avec gestion des annonces et des utilisateurs. Utilise React, Node.js, Express, TypeScript, MySQL et CSS pur.",
-    "image": "/projets/chukoM.png",
-    "technologies": ["React", "Node.js", "Express", "TypeScript", "MySQL", "CSS"],
-    "githubUrl": "https://github.com/username/shuko-manga",
-    "liveUrl": "https://shuko-manga.com"
-  },
-  {
-    "id": "project-generator",
-    "title": "Générateur de Projets",
-    "description": "Outil backend permettant de générer rapidement une structure complète de projet backend avec les fichiers nécessaires pour les routes CRUD et les configurations de base. Adapté à Node.js et TypeScript pour une configuration rapide des projets.",
-    "image": "/projects/project-generator.jpg",
-    "technologies": ["Node.js", "Express", "TypeScript"],
-    "githubUrl": "https://github.com/username/project-generator",
-    "liveUrl": "https://project-generator.com"
-  }
+	{
+		"id": "frigocheck",
+		"title": "FrigoCheck",
+		"description": "Application de gestion alimentaire pour réduire le gaspillage. Permet de suivre les dates de péremption, gérer les stocks, créer des listes de courses et récupérer les promotions des supermarchés grâce au scraping. Utilise Node.js avec Express en backend, MySQL pour la base de données et React avec TypeScript pour le frontend.",
+		"image": "/projets/frigoCheck.png",
+		"technologies": ["React", "Node.js", "MySQL", "TypeScript", "Tailwind CSS"],
+		"githubUrl": "https://github.com/username/frigocheck",
+		"liveUrl": "https://frigocheck.com"
+	},
+	{
+		"id": "Chuko-manga",
+		"title": "Chuko Manga",
+		"description": "Plateforme de mise en relation entre amateurs de mangas, permettant l'achat et vente de mangas d'occasion. Conçu pour offrir une expérience utilisateur simple et fluide, avec gestion des annonces et des utilisateurs. Utilise React, Node.js, Express, TypeScript, MySQL et CSS pur.",
+		"image": "/projets/chukoM.png",
+		"technologies": [
+			"React",
+			"Node.js",
+			"Express",
+			"TypeScript",
+			"MySQL",
+			"CSS"
+		],
+		"githubUrl": "https://github.com/username/shuko-manga",
+		"liveUrl": "https://shuko-manga.com"
+	},
+	{
+		"id": "project-generator",
+		"title": "Générateur de Projets",
+		"description": "Outil backend permettant de générer rapidement une structure complète de projet backend avec les fichiers nécessaires pour les routes CRUD et les configurations de base. Adapté à Node.js et TypeScript pour une configuration rapide des projets.",
+		"image": "/projects/project-generator.jpg",
+		"technologies": ["Node.js", "Express", "TypeScript"],
+		"githubUrl": "https://github.com/username/project-generator",
+		"liveUrl": "https://project-generator.com"
+	}
 ]

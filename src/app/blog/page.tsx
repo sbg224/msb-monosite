@@ -30,9 +30,11 @@ export default function Blog() {
 
   // Filtrer les articles en fonction du terme de recherche et du tag sélectionné
   const filteredBlogs = blogs.filter((post) => {
-    const matchesSearchTerm = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                              post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesSelectedTag = selectedTag === "" || post.tags.includes(selectedTag);
+    const matchesSearchTerm =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSelectedTag =
+      selectedTag === "" || post.tags.includes(selectedTag);
     return matchesSearchTerm && matchesSelectedTag;
   });
 
@@ -53,7 +55,7 @@ export default function Blog() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0077b6]"
             />
-            <select 
+            <select
               value={selectedTag}
               onChange={(e) => setSelectedTag(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0077b6]"
@@ -73,7 +75,11 @@ export default function Blog() {
               <button
                 key={tag}
                 onClick={() => setSelectedTag(tag)}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${selectedTag === tag ? 'bg-[#0077b6] text-white' : 'bg-gray-100 text-gray-700 hover:bg-[#0077b6] hover:text-white'}`}
+                className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                  selectedTag === tag
+                    ? "bg-[#0077b6] text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-[#0077b6] hover:text-white"
+                }`}
               >
                 {tag}
               </button>
@@ -85,7 +91,10 @@ export default function Blog() {
         <div className="space-y-8">
           {filteredBlogs.length > 0 ? (
             filteredBlogs.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-md p-6">
+              <article
+                key={post.id}
+                className="bg-white rounded-lg shadow-md p-6"
+              >
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.tags.map((tag) => (
                     <span
@@ -97,7 +106,10 @@ export default function Blog() {
                   ))}
                 </div>
                 <h2 className="font-poppins text-2xl font-semibold mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#0077b6]">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="hover:text-[#0077b6]"
+                  >
                     {post.title}
                   </Link>
                 </h2>

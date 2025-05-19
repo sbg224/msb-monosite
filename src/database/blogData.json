@@ -1,48 +1,47 @@
-
 [
-  {
-    "id": "1",
-    "title": "Tailwind CSS v4.1 : Révolution dans le design avec des ombres de texte et plus encore",
-    "excerpt": "La version 4.1 de Tailwind CSS marque une nouvelle étape pour les développeurs frontend avec l'introduction des ombres de texte, des masques CSS et des améliorations de performance. Découvrez comment cette mise à jour simplifie le design moderne et améliore l'expérience utilisateur.",
-    "date": "2025-04-10",
-    "tags": ["Tailwind CSS", "CSS", "Frontend"],
-    "slug": "tailwind-css-v4-1",
-    "link": "https://tailwindcss.com/blog/tailwindcss-v4"
-  },
-  {
-    "id": "2",
-    "title": "React Router v7.5 : Le futur du routage React est arrivé",
-    "excerpt": "Avec sa version 7.5, React Router se transforme en un véritable framework avec le 'Framework Mode', offrant une configuration plus simple, des chargements paresseux plus rapides et une gestion des données plus fluide. Apprenez pourquoi cette évolution est cruciale pour les développeurs React.",
-    "date": "2025-04-12",
-    "tags": ["React", "Routing", "JavaScript"],
-    "slug": "react-router-v7-5",
-    "link": "https://reactrouter.com/"
-  },
-  {
-    "id": "3",
-    "title": "L'IA émotionnelle : Vers des chatbots plus humains ?",
-    "excerpt": "Les consommateurs s'attendent de plus en plus à des interactions humaines, même avec des machines. L'IA émotionnelle devient donc un enjeu majeur pour les entreprises cherchant à personnaliser l'expérience client. Découvrez comment cette technologie pourrait transformer les relations numériques.",
-    "date": "2025-04-18",
-    "tags": ["AI", "Chatbots", "UX"],
-    "slug": "ia-emotionnelle-relation-client",
-    "link": "https://www.blog-ossiaconseil.com/blogs/tech-news---avril-2025"
-  },
-  {
-    "id": "4",
-    "title": "Cybersécurité en Europe : Pourquoi les PME doivent se préparer",
-    "excerpt": "Les dépenses en cybersécurité en Europe devraient croître de 11,8 % en 2025, les PME étant les plus vulnérables face aux cybermenaces modernes. Découvrez comment cette tendance pourrait impacter votre entreprise.",
-    "date": "2025-04-20",
-    "tags": ["Cybersecurity", "Tech Trends", "Europe"],
-    "slug": "cybersecurite-europe-2025",
-    "link": "https://www.blog-ossiaconseil.com/blogs/tech-news---avril-2025"
-  },
-  {
-    "id": "5",
-    "title": "React Router v7.5.2 : Mise à jour critique pour la sécurité",
-    "excerpt": "React Router corrige deux vulnérabilités critiques (CVE-2025-43864 et CVE-2025-43865) avec sa mise à jour 7.5.2. Cette version est essentielle pour les développeurs cherchant à sécuriser leurs applications React.",
-    "date": "2025-04-25",
-    "tags": ["React", "Security", "JavaScript"],
-    "slug": "react-router-v7-5-2-security",
-    "link": "https://gbhackers.com/react-router-vulnerabilities/"
-  }
+	{
+		"id": "1",
+		"title": "Tailwind CSS v4.1 : Révolution dans le design avec des ombres de texte et plus encore",
+		"excerpt": "La version 4.1 de Tailwind CSS marque une nouvelle étape pour les développeurs frontend avec l'introduction des ombres de texte, des masques CSS et des améliorations de performance. Découvrez comment cette mise à jour simplifie le design moderne et améliore l'expérience utilisateur.",
+		"date": "2025-04-10",
+		"tags": ["Tailwind CSS", "CSS", "Frontend"],
+		"slug": "tailwind-css-v4-1",
+		"link": "https://tailwindcss.com/blog/tailwindcss-v4"
+	},
+	{
+		"id": "2",
+		"title": "React Router v7.5 : Le futur du routage React est arrivé",
+		"excerpt": "Avec sa version 7.5, React Router se transforme en un véritable framework avec le 'Framework Mode', offrant une configuration plus simple, des chargements paresseux plus rapides et une gestion des données plus fluide. Apprenez pourquoi cette évolution est cruciale pour les développeurs React.",
+		"date": "2025-04-12",
+		"tags": ["React", "Routing", "JavaScript"],
+		"slug": "react-router-v7-5",
+		"link": "https://reactrouter.com/"
+	},
+	{
+		"id": "3",
+		"title": "L'IA émotionnelle : Vers des chatbots plus humains ?",
+		"excerpt": "Les consommateurs s'attendent de plus en plus à des interactions humaines, même avec des machines. L'IA émotionnelle devient donc un enjeu majeur pour les entreprises cherchant à personnaliser l'expérience client. Découvrez comment cette technologie pourrait transformer les relations numériques.",
+		"date": "2025-04-18",
+		"tags": ["AI", "Chatbots", "UX"],
+		"slug": "ia-emotionnelle-relation-client",
+		"link": "https://www.blog-ossiaconseil.com/blogs/tech-news---avril-2025"
+	},
+	{
+		"id": "4",
+		"title": "Cybersécurité en Europe : Pourquoi les PME doivent se préparer",
+		"excerpt": "Les dépenses en cybersécurité en Europe devraient croître de 11,8 % en 2025, les PME étant les plus vulnérables face aux cybermenaces modernes. Découvrez comment cette tendance pourrait impacter votre entreprise.",
+		"date": "2025-04-20",
+		"tags": ["Cybersecurity", "Tech Trends", "Europe"],
+		"slug": "cybersecurite-europe-2025",
+		"link": "https://www.blog-ossiaconseil.com/blogs/tech-news---avril-2025"
+	},
+	{
+		"id": "5",
+		"title": "React Router v7.5.2 : Mise à jour critique pour la sécurité",
+		"excerpt": "React Router corrige deux vulnérabilités critiques (CVE-2025-43864 et CVE-2025-43865) avec sa mise à jour 7.5.2. Cette version est essentielle pour les développeurs cherchant à sécuriser leurs applications React.",
+		"date": "2025-04-25",
+		"tags": ["React", "Security", "JavaScript"],
+		"slug": "react-router-v7-5-2-security",
+		"link": "https://gbhackers.com/react-router-vulnerabilities/"
+	}
 ]
