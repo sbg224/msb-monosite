@@ -24,7 +24,7 @@ export default function Contact() {
       await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulation d'un appel API
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Erreur lors de l'envoi du formulaire :", error);
       setStatus("error");
     }
