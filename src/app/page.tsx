@@ -1,103 +1,145 @@
+import Link from "next/link";
 import Image from "next/image";
+import profil from "../assets/images/profile3.png"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="w-full md:w-1/2">
+            <h1 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
+              Développeur Web Full Stack
+            </h1>
+            <p className="font-merriweather text-lg mb-8 text-gray-700">
+            “Développeur full-stack en reconversion, je combine une solide expertise en React, Node.js et MySQL avec une approche pragmatique de la résolution de problèmes. Mon objectif : créer des solutions technologiques qui ont un impact réel.”
+            </p>
+            <div className="flex gap-4">
+              <Link
+                href="/portfolio"
+                className="bg-[#0077b6] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#005f92] transition-colors"
+              >
+                Voir mon portfolio
+              </Link>
+              <Link
+                href="/blog"
+                className="bg-white text-[#0077b6] px-6 py-3 rounded-lg shadow-md hover:bg-gray-50 transition-colors border border-[#0077b6]"
+              >
+                Lire mon blog
+              </Link>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2">
+            {/* Placeholder pour la photo de profil */}
+            <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden bg-gray-200" style={{ boxShadow: "0 10px 20px rgba(0, 119, 182, 0.3), 0 6px 6px rgba(0, 119, 182, 0.2)" }}>
+              <Image src={profil} alt="image de profil" width={256} height={256} />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Compétences Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="font-poppins text-3xl font-bold text-center mb-12">
+            Mes Compétences
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-lg shadow-md bg-white">
+              <h3 className="font-poppins text-xl font-semibold mb-4">
+                Frontend
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>React / Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg shadow-md bg-white">
+              <h3 className="font-poppins text-xl font-semibold mb-4">
+                Backend
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg shadow-md bg-white">
+              <h3 className="font-poppins text-xl font-semibold mb-4">
+                Outils
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>Git / GitHub</li>
+                <li>Docker</li>
+                <li>CI/CD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projets Récents Section */}
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="font-poppins text-3xl font-bold text-center mb-12">
+          Projets Récents
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Projet FrigoCheck */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="font-poppins text-xl font-semibold mb-2">
+                FrigoCheck
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Application de gestion de frigo pour réduire le gaspillage
+                alimentaire.
+              </p>
+              <div className="flex gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                  React
+                </span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                  Node.js
+                </span>
+              </div>
+              <Link
+                href="/portfolio/frigocheck"
+                className="text-[#0077b6] hover:underline"
+              >
+                En savoir plus →
+              </Link>
+            </div>
+          </div>
+
+          {/* Projet Shuko Manga */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="font-poppins text-xl font-semibold mb-2">
+                Shuko Manga
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Plateforme de lecture de manga en ligne.
+              </p>
+              <div className="flex gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                  Next.js
+                </span>
+                <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
+                  TypeScript
+                </span>
+              </div>
+              <Link
+                href="/portfolio/shuko-manga"
+                className="text-[#0077b6] hover:underline"
+              >
+                En savoir plus →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
