@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Merriweather } from "next/font/google";
+import Link from "next/link";
 import Head from "next/head";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -84,36 +85,36 @@ export default function RootLayout({
 								</h3>
 								<ul className="space-y-2">
 									<li>
-										<a
+										<Link
 											href="/portfolio"
 											className="text-gray-700 hover:text-vintage-terracotta transition-colors"
 										>
 											Portfolio
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
+										<Link
 											href="/blog"
 											className="text-gray-700 hover:text-vintage-terracotta transition-colors"
 										>
 											Blog
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
+										<Link
 											href="/about"
 											className="text-gray-700 hover:text-vintage-terracotta transition-colors"
 										>
 											À propos
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
+										<Link
 											href="/contact"
 											className="text-gray-700 hover:text-vintage-terracotta transition-colors"
 										>
 											Contact
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>

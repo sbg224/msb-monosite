@@ -51,8 +51,7 @@ export default function MentionsLegales() {
 						</h2>
 						<div className="text-gray-700 space-y-2">
 							<p>
-								L'ensemble de ce site relève de la législation française et
-								internationale sur le droit d'auteur et la propriété
+								L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteuret la propriété
 								intellectuelle. Tous les droits de reproduction sont réservés, y
 								compris pour les documents téléchargeables et les
 								représentations iconographiques et photographiques.
@@ -72,8 +71,7 @@ export default function MentionsLegales() {
 						</h2>
 						<div className="text-gray-700 space-y-2">
 							<p>
-								Conformément à la loi "Informatique et Libertés" du 6 janvier
-								1978 modifiée et au Règlement Général sur la Protection des
+								Conformément à la loi “Informatique et Libertés” du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des
 								Données (RGPD), vous disposez d'un droit d'accès, de
 								rectification et de suppression des données vous concernant.
 							</p>
@@ -106,8 +104,7 @@ export default function MentionsLegales() {
 						</h2>
 						<div className="text-gray-700 space-y-2">
 							<p>
-								Pour toute question concernant ces mentions légales, vous pouvez
-								nous contacter à l'adresse suivante : sambah450@gmail.com
+								Pour toute question concernant ces mentions légales, vous pouvez nous contacter à l’adresse suivante : sambah450@gmail.com
 							</p>
 						</div>
 					</section>
