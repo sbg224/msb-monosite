@@ -4,14 +4,14 @@ import { useState } from "react";
 import blogs from "../../database/blogData.json";
 
 // Types pour les articles
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  tags: string[];
-  slug: string;
-}
+// interface BlogPost {
+//   id: string;
+//   title: string;
+//   excerpt: string;
+//   date: string;
+//   tags: string[];
+//   slug: string;
+// }
 
 // Tags disponibles
 const availableTags = [

@@ -47,12 +47,12 @@ async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     const posts: BlogPost[] = JSON.parse(fileContent);
     return posts.find((post) => post.slug === slug) || null;
   } catch (error) {
-    console.error("Erreur lors du chargement des articles :", error);
+    console.error("Erreur lors du chargement des articles :", error);
     return null;
   }
 }
 
-// ✅ Composant principal pour afficher l'article
+// ✅ Composant principal pour afficher l’article
 const BlogPostPage = async ({ params }: PageProps) => {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
@@ -93,7 +93,7 @@ const BlogPostPage = async ({ params }: PageProps) => {
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-3 bg-vintage-terracotta text-white rounded-lg shadow-vintage hover:shadow-vintage-hover transform hover:-translate-y-1 transition-all duration-300"
           >
-            Lire l'article complet →
+            Lire l’article complet →
           </a>
         </div>
       </div>
@@ -114,7 +114,7 @@ export async function generateStaticParams(): Promise<{ params: { slug: string }
     const posts: BlogPost[] = JSON.parse(fileContent);
     return posts.map((post) => ({ params: { slug: post.slug } }));
   } catch (error) {
-    console.error("Erreur lors de la génération des chemins statiques :", error);
+    console.error("Erreur lors de la génération des chemins statiques :", error);
     return [];
   }
 }

@@ -73,7 +73,7 @@ export default function About() {
 							</h3>
 							<p className="text-gray-600 mb-2">2024 - Présent</p>
 							<p className="text-gray-700">
-								Développement d'applications web modernes avec React, Next.js et
+								Développement d’applications web modernes avec React, Next.js et
 								Node.js. Mise en place de solutions backend robustes et
 								scalables.
 							</p>
@@ -84,8 +84,8 @@ export default function About() {
 							</h3>
 							<p className="text-gray-600 mb-2">2024 - 2025</p>
 							<p className="text-gray-700">
-								Création d'interfaces utilisateur réactives et accessibles.
-								Optimisation des performances et de l'expérience utilisateur.
+								Création d’interfaces utilisateur réactives et accessibles.
+								Optimisation des performances et de l’expérience utilisateur.
 							</p>
 						</div>
 					</div>

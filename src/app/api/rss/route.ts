@@ -14,13 +14,13 @@ export interface BlogPost {
 	link: string;
 }
 
-export async function GET(req: NextRequest) {
+export async function GET() {
 	const filePath = path.join(process.cwd(), "src", "database", "blogData.json");
 	const fileContent = fs.readFileSync(filePath, "utf8");
 	const posts: BlogPost[] = JSON.parse(fileContent);
 
 	const rssItems = posts
-		.map(({ title, slug, date, excerpt, link, tags }: BlogPost) => {
+		.map(({ title, date, excerpt, link, tags }: BlogPost) => {
 			const categoryTags = tags
 				.map((tag) => `<category><![CDATA[${tag}]]></category>`)
 				.join("");
