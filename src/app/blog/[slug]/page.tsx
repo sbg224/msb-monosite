@@ -1,9 +1,10 @@
-import { Metadata } from "next";
+import React from 'react';
+import { Metadata } from 'next';
 import fs from "fs";
 import path from "path";
-import React from "react";
 import { notFound } from "next/navigation";
 
+// ✅ Définition de l'interface BlogPost
 export interface BlogPost {
   id: string;
   title: string;
@@ -16,25 +17,24 @@ export interface BlogPost {
 }
 
 // ✅ Définition correcte des types pour les props
-export interface PageProps {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+interface PageProps {
+  params: Promise<{ slug: string }>;
 }
 
-// ✅ Génération des métadonnées pour SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+// ✅ Fonction pour générer les métadonnées pour SEO
+export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+  const { slug } = await params;
+
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return { title: "Article non trouvé" };
   }
 
   return { title: post.title, description: post.excerpt };
-}
+};
 
-// ✅ Récupération d'un article par son slug
+// ✅ Fonction pour récupérer un article par son slug
 async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
     const filePath = path.join(
@@ -53,11 +53,13 @@ async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 }
 
 // ✅ Composant principal pour afficher l'article
-export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getPostBySlug(params.slug);
+const BlogPostPage = async ({ params }: PageProps) => {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
+    return null; // Added return here
   }
 
   return (
@@ -84,7 +86,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           })}
         </time>
         <div className="prose prose-lg max-w-none">
-          <p className="mb-4 text-gray-700">{post.content}</p>
+          <p className="mb-4 text-gray-700">{post.excerpt}</p>
           <a
             href={post.link}
             target="_blank"
@@ -97,12 +99,10 @@ export default async function BlogPostPage({ params }: PageProps) {
       </div>
     </article>
   );
-}
+};
 
-// ✅ Génération des chemins statiques
-export async function generateStaticParams(): Promise<
-  { params: { slug: string } }[]
-> {
+// ✅ Génération des chemins statiques pour le pré-rendu
+export async function generateStaticParams(): Promise<{ params: { slug: string } }[]> {
   try {
     const filePath = path.join(
       process.cwd(),
@@ -114,10 +114,9 @@ export async function generateStaticParams(): Promise<
     const posts: BlogPost[] = JSON.parse(fileContent);
     return posts.map((post) => ({ params: { slug: post.slug } }));
   } catch (error) {
-    console.error(
-      "Erreur lors de la génération des chemins statiques :",
-      error
-    );
+    console.error("Erreur lors de la génération des chemins statiques :", error);
     return [];
   }
 }
+
+export default BlogPostPage;
